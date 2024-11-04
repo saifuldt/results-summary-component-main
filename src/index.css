@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'hanken';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('ttf'),
+         url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
