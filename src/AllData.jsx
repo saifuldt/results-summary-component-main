@@ -1,4 +1,7 @@
-import img from './assets/images/icon-memory.svg'
+import reactionIcon from './assets/images/icon-reaction.svg';
+import memoryIcon from './assets/images/icon-memory.svg';
+import verbalIcon from './assets/images/icon-verbal.svg';
+import visualIcon from './assets/images/icon-visual.svg';
 import data from './data.json'
 const AllData = () => {
     const styles = {
@@ -6,7 +9,14 @@ const AllData = () => {
         Memory:'flex justify-between text-orange-500 bg-orange-100 py-2 px-4 rounded-lg',
         Verbal:'flex justify-between text-green-600 bg-green-100 py-2 px-4 rounded-lg',
         Visual:'flex justify-between text-blue-800 bg-blue-100 py-2 px-4 rounded-lg '
-    }
+    };
+
+    const icons = {
+        Reaction: reactionIcon,
+        Memory: memoryIcon,
+        Verbal: verbalIcon,
+        Visual: visualIcon,
+      };
     return (
         <div className="flex justify-center items-center font-semibold">
             <div className="md:w-[600px] w-full md:h-screen flex justify-center items-center md:flex-row flex-col ">
@@ -29,7 +39,7 @@ const AllData = () => {
                         data.map((data) => (
                             <div className={`${styles[data.category]}`} >
                                 <div className="flex gap-2">
-                                    <img src={data.icon} alt="icon" />
+                                    <img src={icons[data.category]} alt={`${data.category}`} />
                                     <p>{data.category}</p>
                                 </div>
                                 <p className="text-blue-950"> {data.score} <span className="text-gray-400">/ 100</span></p>
